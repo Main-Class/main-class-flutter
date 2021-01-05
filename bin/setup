@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# simple
+git flow init -d
+
+# override stuff or whatever
+git config gitflow.branch.master main
+git config gitflow.prefix.versiontag v
