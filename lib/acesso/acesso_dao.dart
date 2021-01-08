@@ -5,5 +5,5 @@ abstract class AcessoHandler {
 
   Future<UsuarioLogado> getUsuarioLogado();
 
-  Future<void> lgoout();
+  Future<void> logout();
 }

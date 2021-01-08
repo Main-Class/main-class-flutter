@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/acesso/acesso_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/acesso/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/acesso/session_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/acesso/usuario_logado.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/business/bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/business/form_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/business/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/business/infinite_list_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/business/model_form_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/api/api_client.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/api/api_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/api/api_query_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/api/decoder.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/api/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/firebase/firebase_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/firebase/firebase_live_query_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/firebase/firebase_query_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/firebase/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dao/query_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/abort_exception.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/business_exception.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/error_message.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/query.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/launcher.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/bloc/bloc_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/form/command_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/form/manual_form.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/form/model_form.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/form/plain_form.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/mensagem/mensagem.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/splash/splash.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/validation/validation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main_class_flutter_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609842571978</updated>
-      <workItem from="1609842577504" duration="9384000" />
+      <workItem from="1609842577504" duration="9892000" />
     </task>
     <servers />
   </component>

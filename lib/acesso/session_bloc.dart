@@ -19,11 +19,25 @@ class SessionBloc implements Bloc {
     _usuario.close();
   }
 
+  Future<UsuarioLogado> login(
+    String username,
+    String password,
+    Map<String, dynamic> extras,
+  ) async {
+    UsuarioLogado usuario =
+        await acessoHandler.login(username, password, extras);
+
+    _add(usuario);
+
+    return usuario;
+  }
+
   _add(UsuarioLogado usuario) async {
     _usuario.add(usuario);
   }
 
   logout() async {
+    await acessoHandler.logout();
     await _add(null);
   }
 
