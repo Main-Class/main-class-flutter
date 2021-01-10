@@ -43,7 +43,7 @@ class ApiClient {
           : resp.data;
     } on DioError catch (error) {
       if (errorHandler != null) {
-        errorHandler(error);
+        await errorHandler(error);
       }
 
       rethrow;
@@ -73,7 +73,7 @@ class ApiClient {
           : resp.data;
     } on DioError catch (error) {
       if (errorHandler != null) {
-        errorHandler(error);
+        await errorHandler(error);
       }
 
       rethrow;
@@ -103,7 +103,7 @@ class ApiClient {
           : resp.data;
     } on DioError catch (error) {
       if (errorHandler != null) {
-        errorHandler(error);
+        await errorHandler(error);
       }
 
       rethrow;
@@ -130,7 +130,7 @@ class ApiClient {
           : resp.data;
     } on DioError catch (error) {
       if (errorHandler != null) {
-        errorHandler(error);
+        await errorHandler(error);
       }
 
       rethrow;
