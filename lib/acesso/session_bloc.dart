@@ -17,6 +17,7 @@ class SessionBloc implements Bloc {
   void dispose() {
     _usuarioSubscription?.cancel();
     _usuario.close();
+    acessoHandler.dispose();
   }
 
   Future<UsuarioLogado> login(
@@ -44,6 +45,7 @@ class SessionBloc implements Bloc {
   @override
   Future<void> init() async {
     _usuario = new BehaviorSubject();
+    await acessoHandler.init();
   }
 
   load() async {
