@@ -99,7 +99,7 @@ class _CommandButtonState extends State<CommandButton> {
     } on AbortException catch (ex) {
       // Ignorado
     } catch (ex, stack) {
-      print("[MAIN CLASS] ERRO NÃO TRATADO: " + ex + "\n" + stack.toString());
+      print("[MAIN CLASS] ERRO NÃO TRATADO: " + ex.toString() + "\n" + stack.toString());
       rethrow;
     } finally {
       setState(() {
