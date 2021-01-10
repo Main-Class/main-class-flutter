@@ -3,18 +3,24 @@ part of main_class.dao.api;
 typedef JsonDecoder<T> = T Function(Map<String, dynamic> json);
 typedef JsonEncoder<T> = Map<String, dynamic> Function(T json);
 
+typedef ErrorHandler = Future<dynamic> Function(DioError error);
+
 class ApiClient {
   final String basePath;
   final Dio dio;
+  final ErrorHandler errorHandler;
 
-  ApiClient({this.basePath, this.dio});
+  ApiClient({this.basePath, this.dio, this.errorHandler});
 
-  factory ApiClient.withDefaultHeaders({String basePath, Map<String, String> Function() defaultHeaderesSupplier}) {
-    return ApiClient(basePath: basePath, dio: new Dio()..interceptors.add(new InterceptorsWrapper(
-       onRequest: (options) {
-         options.headers.addAll(defaultHeaderesSupplier());
-       }
-    )));
+  factory ApiClient.withDefaultHeaders(
+      {String basePath,
+      Map<String, String> Function() defaultHeaderesSupplier}) {
+    return ApiClient(
+        basePath: basePath,
+        dio: new Dio()
+          ..interceptors.add(new InterceptorsWrapper(onRequest: (options) {
+            options.headers.addAll(defaultHeaderesSupplier());
+          })));
   }
 
   Future<O> get<O>(
@@ -23,17 +29,25 @@ class ApiClient {
     Map<String, dynamic> queryParams,
     JsonDecoder<O> fromJson,
   }) async {
-    Response resp = await dio.get(
-      "$basePath$path",
-      queryParameters: queryParams ?? {},
-      options: Options(
-        headers: headers ?? {},
-      ),
-    );
+    try {
+      Response resp = await dio.get(
+        "$basePath$path",
+        queryParameters: queryParams ?? {},
+        options: Options(
+          headers: headers ?? {},
+        ),
+      );
 
-    return resp.data != null && fromJson != null
-        ? fromJson(resp.data)
-        : resp.data;
+      return resp.data != null && fromJson != null
+          ? fromJson(resp.data)
+          : resp.data;
+    } on DioError catch (error) {
+      if (errorHandler != null) {
+        errorHandler(error);
+      }
+
+      rethrow;
+    }
   }
 
   Future<O> post<I, O>(
@@ -44,18 +58,26 @@ class ApiClient {
     JsonDecoder<O> fromJson,
     JsonEncoder<I> toJson,
   }) async {
-    Response resp = await dio.post(
-      "$basePath$path",
-      data: body != null ? toJson(body) : null,
-      queryParameters: queryParams ?? {},
-      options: Options(
-        headers: headers ?? {},
-      ),
-    );
+    try {
+      Response resp = await dio.post(
+        "$basePath$path",
+        data: body != null ? toJson(body) : null,
+        queryParameters: queryParams ?? {},
+        options: Options(
+          headers: headers ?? {},
+        ),
+      );
 
-    return resp.data != null && fromJson != null
-        ? fromJson(resp.data)
-        : resp.data;
+      return resp.data != null && fromJson != null
+          ? fromJson(resp.data)
+          : resp.data;
+    } on DioError catch (error) {
+      if (errorHandler != null) {
+        errorHandler(error);
+      }
+
+      rethrow;
+    }
   }
 
   Future<O> put<I, O>(
@@ -66,18 +88,26 @@ class ApiClient {
     JsonDecoder<O> fromJson,
     JsonEncoder<I> toJson,
   }) async {
-    Response resp = await dio.put(
-      "$basePath$path",
-      data: body != null ? toJson(body) : null,
-      queryParameters: queryParams ?? {},
-      options: Options(
-        headers: headers ?? {},
-      ),
-    );
+    try {
+      Response resp = await dio.put(
+        "$basePath$path",
+        data: body != null ? toJson(body) : null,
+        queryParameters: queryParams ?? {},
+        options: Options(
+          headers: headers ?? {},
+        ),
+      );
 
-    return resp.data != null && fromJson != null
-        ? fromJson(resp.data)
-        : resp.data;
+      return resp.data != null && fromJson != null
+          ? fromJson(resp.data)
+          : resp.data;
+    } on DioError catch (error) {
+      if (errorHandler != null) {
+        errorHandler(error);
+      }
+
+      rethrow;
+    }
   }
 
   Future<O> delete<O>(
@@ -86,16 +116,24 @@ class ApiClient {
     Map<String, dynamic> headers,
     JsonDecoder<O> fromJson,
   }) async {
-    Response resp = await dio.delete(
-      "$basePath$path",
-      queryParameters: queryParams ?? {},
-      options: Options(
-        headers: headers ?? {},
-      ),
-    );
+    try {
+      Response resp = await dio.delete(
+        "$basePath$path",
+        queryParameters: queryParams ?? {},
+        options: Options(
+          headers: headers ?? {},
+        ),
+      );
 
-    return resp.data != null && fromJson != null
-        ? fromJson(resp.data)
-        : resp.data;
+      return resp.data != null && fromJson != null
+          ? fromJson(resp.data)
+          : resp.data;
+    } on DioError catch (error) {
+      if (errorHandler != null) {
+        errorHandler(error);
+      }
+
+      rethrow;
+    }
   }
 }

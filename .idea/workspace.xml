@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/model/message_parser.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/business_exception.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/business_exception.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/error_message.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/index.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609842571978</updated>
       <workItem from="1609842577504" duration="11011000" />
-      <workItem from="1610238186996" duration="2593000" />
+      <workItem from="1610238186996" duration="3468000" />
     </task>
     <servers />
   </component>
