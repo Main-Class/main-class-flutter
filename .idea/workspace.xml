@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/model/message_parser.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/business_exception.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/business_exception.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/error_message.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/index.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +15,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1me8Cq2wc1TwMuCJINcZDZTq4qd" />
   <component name="ProjectReloadState">
@@ -49,13 +61,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,7 +83,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609842571978</updated>
-      <workItem from="1609842577504" duration="10923000" />
+      <workItem from="1609842577504" duration="11011000" />
+      <workItem from="1610238186996" duration="2593000" />
     </task>
     <servers />
   </component>
@@ -86,5 +101,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
