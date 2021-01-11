@@ -15,6 +15,7 @@ dependencies:
   rxdart:
   dio:
   flushbar:
+  shimmer:
 
 dev_dependencies:
   flutter_test:
