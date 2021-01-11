@@ -9,7 +9,7 @@ typedef ListDecoder<M extends Model> = List<M> Function(
 PageDecoder<M> pageDecoder<M extends Model>(JsonDecoder<M> modelDecoder) {
   return (json) {
     return Page(
-      nextPageRef: json['hasNext']
+      nextPageRef: (json['hasProxima'] ?? false)
           ? int.parse(json['paginaAtual'].toString()) + 1
           : null,
       result: (json['itns'] as List)
