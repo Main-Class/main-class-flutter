@@ -58,7 +58,7 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
                 ...preSlivers,
                 new SliverList(
                   delegate: SliverChildBuilderDelegate(
-                        (context, index) {
+                    (context, index) {
                       if (list.data == null || index >= list.data.length) {
                         if (list.state == InfiniteListState.error) {
                           return _buildError(context, list.error);
@@ -152,7 +152,10 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
               ),
             ),
             onPressed: bloc.refresh,
-            child: const Text("Tentar Novamente"),
+            child: const Text(
+              "Tentar Novamente",
+              style: TextStyle(color: Colors.black54),
+            ),
           )
         ],
       ),
