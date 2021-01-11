@@ -46,9 +46,6 @@ class SessionBloc implements Bloc {
   Future<void> init() async {
     _usuario = new BehaviorSubject();
     await acessoHandler.init();
-  }
-
-  load() async {
     await _add(await acessoHandler.getUsuarioLogado());
   }
 }
