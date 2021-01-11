@@ -116,6 +116,12 @@
       "languageVersion": "2.3"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/gabrielsilva/tools/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
       "name": "js",
       "rootUri": "file:///Users/gabrielsilva/tools/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.2",
       "packageUri": "lib/",
@@ -260,7 +266,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-01-11T02:13:02.405260Z",
+  "generated": "2021-01-11T20:31:30.539203Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }

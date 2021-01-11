@@ -1,8 +1,4 @@
-library main_class.utils;
-
-import 'dart:io';
-import 'package:url_launcher/url_launcher.dart';
-
+part of main_class.utils;
 launchEndereco(String endereco) async {
   if (Platform.isIOS) {
     String encoded = Uri.encodeQueryComponent(endereco);

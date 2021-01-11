@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="" />
+    <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/utils/date_extension.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/int_extension.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/string_util.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/view/format/text_format.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/launcher.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/launcher.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/index.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +49,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/view/list" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/utils" />
       <recent name="$PROJECT_DIR$/lib/view/list" />
       <recent name="$PROJECT_DIR$/lib/view" />
       <recent name="$PROJECT_DIR$/lib" />
@@ -83,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609842571978</updated>
       <workItem from="1609842577504" duration="11011000" />
-      <workItem from="1610238186996" duration="11831000" />
+      <workItem from="1610238186996" duration="13323000" />
     </task>
     <servers />
   </component>

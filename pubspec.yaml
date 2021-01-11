@@ -16,6 +16,7 @@ dependencies:
   dio:
   flushbar:
   shimmer:
+  intl:
 
 dev_dependencies:
   flutter_test:
