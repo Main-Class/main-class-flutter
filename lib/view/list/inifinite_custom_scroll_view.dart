@@ -99,11 +99,10 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
 
   Widget _buildEmptyState(BuildContext context, Q query) {
     if (emptyStateBuilder != null) {
-      return SingleChildScrollView(
-        child: Padding(
-          padding: padding,
-          child: emptyStateBuilder(context, query),
-        ),
+      return Container(
+        padding: padding,
+        width: double.infinity,
+        child: emptyStateBuilder(context, query),
       );
     }
 
