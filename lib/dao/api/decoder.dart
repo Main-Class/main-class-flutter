@@ -9,11 +9,14 @@ typedef ListDecoder<M extends Model> = List<M> Function(
 PageDecoder<M> pageDecoder<M extends Model>(JsonDecoder<M> modelDecoder) {
   return (json) {
     return Page(
-      nextPageRef: int.parse(json['paginaAtual'].toString()) + 1,
+      nextPageRef: json['hasNext']
+          ? int.parse(json['paginaAtual'].toString()) + 1
+          : null,
       result: (json['itns'] as List)
-          ?.map((e) => e as Map<String, dynamic>)
-          ?.map(modelDecoder)
-          ?.toList() ?? [],
+              ?.map((e) => e as Map<String, dynamic>)
+              ?.map(modelDecoder)
+              ?.toList() ??
+          [],
       total: int.parse(json['totalItens'].toString()),
     );
   };
