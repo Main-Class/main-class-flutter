@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/utils/date_extension.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/int_extension.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/string_util.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/format/text_format.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/launcher.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/launcher.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,21 +62,6 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -99,6 +72,7 @@
       <updated>1609842571978</updated>
       <workItem from="1609842577504" duration="11011000" />
       <workItem from="1610238186996" duration="13323000" />
+      <workItem from="1610397393275" duration="1937000" />
     </task>
     <servers />
   </component>
