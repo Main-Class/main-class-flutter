@@ -18,8 +18,9 @@ class ApiClient {
     return ApiClient(
         basePath: basePath,
         dio: new Dio()
-          ..interceptors.add(new InterceptorsWrapper(onRequest: (options) {
+          ..interceptors.add(new InterceptorsWrapper(onRequest: (options, handler) {
             options.headers.addAll(defaultHeaderesSupplier());
+            handler.next(options);
           })));
   }
 

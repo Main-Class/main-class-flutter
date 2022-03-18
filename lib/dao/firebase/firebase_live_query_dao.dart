@@ -7,7 +7,7 @@ abstract class FirebaseLiveQueryDAO<M extends Model, Q extends Query> {
   FirebaseLiveQueryDAO({this.collectionName, this.fromJson});
 
   firestore.CollectionReference get _collection =>
-      firestore.Firestore.instance.collection(collectionName);
+      firestore.FirebaseFirestore.instance.collection(collectionName);
 
   @override
   Stream<List<M>> query(Q query) {

@@ -21,7 +21,7 @@ abstract class FirebaseQueryDAO<M extends Model, Q extends Query>
     }
 
     firestore.QuerySnapshot snapshot =
-        await whereQuery.limit(query.limit ?? 10).getDocuments();
+        await whereQuery.limit(query.limit ?? 10).get();
 
     return Page(
       result: snapshot.docs.map((doc) => fromJson(doc.id, doc.data())).toList(),
