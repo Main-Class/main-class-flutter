@@ -1,7 +1,6 @@
 name: main_class_flutter
 description: A new Flutter project.
-version: 1.0.0
-author: Gabriel Silva
+version: 1.1.0
 homepage: https://mainclass.com.br
 
 environment:
