@@ -1,6 +1,4 @@
 
-C
-lib/view/index.dart,6/0/603bd4854639a417c10ae6c3b7884a631476bba6
 F
 main_class_flutter.iml,6/3/63b4058a6c6669805bc22d0ebd1fb14f4c54085e
 <
@@ -51,8 +49,6 @@ _
 /lib/view/list/inifinite_custom_scroll_view.dart,e/8/e8bf72996651defe5c319b031d1c685715023259
 V
 &lib/view/list/inifinite_list_view.dart,2/4/240ede0ac03ec6468427efbdc797ebc8871dce68
-O
-lib/view/mensagem/mensagem.dart,0/2/02097d7a40d61c128eabfb18792e55c4db15fdcc
 K
 lib/view/splash/splash.dart,2/7/27724b5f849d90a207fde84534d510928a14cd5f
 S

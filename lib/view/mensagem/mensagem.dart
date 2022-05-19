@@ -2,16 +2,14 @@ part of main_class.view;
 
 enum TipoMensagem { success, error, warning }
 
-class Mensagem extends Flushbar {
+class Mensagem extends SnackBar {
   Mensagem({
     required String mensagem,
     TipoMensagem tipo = TipoMensagem.success,
   }) : super(
           backgroundColor: _color(tipo),
-          flushbarPosition: FlushbarPosition.TOP,
-          flushbarStyle: FlushbarStyle.GROUNDED,
           duration: Duration(seconds: 4),
-          messageText: Row(
+          content: Row(
             children: <Widget>[
               Expanded(
                 child: Text(
@@ -75,5 +73,9 @@ class Mensagem extends Flushbar {
         color: Colors.white,
       );
     }
+  }
+
+  show(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(this);
   }
 }
