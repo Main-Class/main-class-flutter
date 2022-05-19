@@ -6,18 +6,12 @@ typedef CommandCallback = Function(LodingWrapper loading);
 class CommandButton extends StatefulWidget {
   final Widget? child;
   final CommandCallback? onPressed;
-  final EdgeInsets? padding;
-  final ShapeBorder? shape;
-  final Color? fillColor;
-  final double? elevation;
+  final ButtonStyle? style;
 
   CommandButton({
     this.child,
     this.onPressed,
-    this.padding,
-    this.shape,
-    this.fillColor,
-    this.elevation,
+    this.style,
   });
 
   @override
@@ -31,15 +25,8 @@ class _CommandButtonState extends State<CommandButton> {
   Widget build(BuildContext context) {
     ButtonThemeData buttonTheme = ButtonTheme.of(context);
 
-    return RawMaterialButton(
-      constraints: BoxConstraints(
-        minWidth: buttonTheme.minWidth,
-      ),
-      padding: widget.padding ?? buttonTheme.padding,
-      shape: widget.shape ?? buttonTheme.shape,
-      fillColor: (widget.fillColor ?? buttonTheme.colorScheme!.primary)
-          .withOpacity(_loading || widget.onPressed == null ? .45 : 1),
-      elevation: widget.elevation ?? 2,
+    return ElevatedButton(
+      style: widget.style,
       child: _buildChild(),
       onPressed: !_loading && widget.onPressed != null ? _act : null,
     );
