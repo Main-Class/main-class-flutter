@@ -33,7 +33,7 @@ class _CommandButtonState extends State<CommandButton> {
 
     return RawMaterialButton(
       constraints: BoxConstraints(
-        minWidth: buttonTheme.minWidth ?? 54,
+        minWidth: buttonTheme.minWidth,
       ),
       padding: widget.padding ?? buttonTheme.padding,
       shape: widget.shape ?? buttonTheme.shape,
