@@ -4,7 +4,10 @@ abstract class FirebaseLiveQueryDAO<M extends Model, Q extends Query> {
   final String collectionName;
   final FromJson<M> fromJson;
 
-  FirebaseLiveQueryDAO({this.collectionName, this.fromJson});
+  FirebaseLiveQueryDAO({
+    required this.collectionName,
+    required this.fromJson,
+  });
 
   firestore.CollectionReference get _collection =>
       firestore.FirebaseFirestore.instance.collection(collectionName);
@@ -18,13 +21,13 @@ abstract class FirebaseLiveQueryDAO<M extends Model, Q extends Query> {
     }
 
     if (query.limit != null) {
-      whereQuery = whereQuery.limit(query.limit);
+      whereQuery = whereQuery.limit(query.limit!);
     }
 
     Stream<firestore.QuerySnapshot> stream = whereQuery.snapshots();
 
     return stream.map(
-      (snap) => snap.docs.map((doc) => fromJson(doc.id, doc.data())).toList(),
+      (snap) => snap.docs.map((doc) => fromJson(doc.id, doc.data() as dynamic)).toList(),
     );
   }
 

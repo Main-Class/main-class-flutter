@@ -3,12 +3,12 @@ part of main_class.dao.api;
 class ApiDAO<M extends Model> implements DAO<M> {
   final ApiClient client;
   final String basePath;
-  final JsonDecoder<M> decoder;
-  final JsonEncoder<M> encoder;
+  final JsonDecoder<M>? decoder;
+  final JsonEncoder<M>? encoder;
 
   ApiDAO({
-    this.client,
-    this.basePath,
+    required this.client,
+    required this.basePath,
     this.encoder,
     this.decoder,
   });
@@ -29,7 +29,7 @@ class ApiDAO<M extends Model> implements DAO<M> {
   }
 
   @override
-  Future<M> get(String id) async {
+  Future<M?> get(String id) async {
     return await client.get("$basePath/$id", fromJson: decoder);
   }
 

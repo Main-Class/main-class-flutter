@@ -6,11 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/main-class-flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/main-class-flutter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/acesso/session_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/acesso/session_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/acesso/usuario_logado.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/acesso/usuario_logado.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/business/form_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/business/form_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/business/infinite_list_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/business/infinite_list_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/business/model_form_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/business/model_form_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/api/api_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/api/api_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/api/api_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/api/api_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/api/api_query_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/api/api_query_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/api/decoder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/api/decoder.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/firebase/firebase_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/firebase/firebase_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/firebase/firebase_live_query_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/firebase/firebase_live_query_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/firebase/firebase_query_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/firebase/firebase_query_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/query.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/query.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/bloc/bloc_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/bloc/bloc_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/form/command_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/form/command_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/form/manual_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/form/manual_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/form/model_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/form/model_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/form/plain_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/form/plain_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/list/inifinite_custom_scroll_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/list/inifinite_custom_scroll_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/list/inifinite_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/list/inifinite_list_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/list/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/list/types.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/mensagem/mensagem.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/mensagem/mensagem.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/splash/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/splash/splash.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -84,6 +114,8 @@
       <workItem from="1610238186996" duration="13323000" />
       <workItem from="1610397393275" duration="1937000" />
       <workItem from="1642172122910" duration="1117000" />
+      <workItem from="1647620031221" duration="298000" />
+      <workItem from="1652922891467" duration="1817000" />
     </task>
     <servers />
   </component>

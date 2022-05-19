@@ -7,12 +7,12 @@ typedef PlainFormBuilder<T> = Widget Function(
 
 class PlainForm<I, O> extends ManualForm<I, O> {
   PlainForm({
-    @required FormBloc<I, O> bloc,
-    SubmitCallback<O> onSubmitSuccess,
+    required FormBloc<I, O> bloc,
+    SubmitCallback<O>? onSubmitSuccess,
     String buttonText = "Submeter",
-    @required I initialModel,
-    @required PlainFormBuilder<I> formBuilder,
-    ErrorCallback onSubmitError,
+    required I initialModel,
+    required PlainFormBuilder<I> formBuilder,
+    ErrorCallback? onSubmitError,
   })  : assert(formBuilder != null),
         assert(buttonText != null),
         assert(initialModel != null),
@@ -29,10 +29,10 @@ class PlainForm<I, O> extends ManualForm<I, O> {
         );
 
   static FormBuilder<I, O> _buildForm<I, O>({
-    SubmitCallback<O> onSubmit,
+    SubmitCallback<O>? onSubmit,
     String buttonText = "Submeter",
-    @required PlainFormBuilder<I> formBuilder,
-    ErrorCallback onSubmitError,
+    required PlainFormBuilder<I> formBuilder,
+    ErrorCallback? onSubmitError,
   }) {
     return (BuildContext context, I model, SetModelCallback setModel,
         Submitter<O> submit, Resetter<I> resetter) {
@@ -54,11 +54,11 @@ class PlainForm<I, O> extends ManualForm<I, O> {
   }
 
   static Widget _buildSubmitButton<O>({
-    BuildContext context,
-    SubmitCallback<O> onSubmit,
+    required BuildContext context,
+    SubmitCallback<O>? onSubmit,
     String buttonText = "Submeter",
-    ErrorCallback onSubmitError,
-    Submitter<O> submit,
+    ErrorCallback? onSubmitError,
+    required Submitter<O> submit,
   }) {
     var _submit = () async {
       var output = await submit();

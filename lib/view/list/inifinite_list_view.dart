@@ -3,8 +3,8 @@ part of main_class.view;
 class InfiniteListView<T extends Model, Q extends Query>
     extends StatelessWidget {
   const InfiniteListView({
-    @required this.bloc,
-    @required this.itemBuilder,
+    required this.bloc,
+    required this.itemBuilder,
     this.scrollDirection = Axis.vertical,
     this.padding,
     this.reverse = false,
@@ -18,9 +18,9 @@ class InfiniteListView<T extends Model, Q extends Query>
   final InfiniteListBloc<T, Q> bloc;
   final ItemBuilder<T, Q> itemBuilder;
   final Axis scrollDirection;
-  final EdgeInsetsGeometry padding;
-  final SeparatorBuilder<T> separatorBuilder;
-  final EmptyStateBuilder<Q> emptyStateBuilder;
+  final EdgeInsetsGeometry? padding;
+  final SeparatorBuilder<T>? separatorBuilder;
+  final EmptyStateBuilder<Q>? emptyStateBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class InfiniteListView<T extends Model, Q extends Query>
         stream: bloc.listStream,
         initialData: bloc.list,
         builder: (context, snapshot) {
-          SnapshotInfiniteList<T, Q> list = snapshot.data;
+          SnapshotInfiniteList<T, Q> list = snapshot.data!;
 
           if ((list.data?.isEmpty ?? true) &&
               list.nextPageRef == null &&
@@ -46,10 +46,10 @@ class InfiniteListView<T extends Model, Q extends Query>
           return ListView.separated(
             separatorBuilder: (context, index) {
               if (separatorBuilder != null) {
-                return separatorBuilder(
+                return separatorBuilder!(
                   context,
-                  index < list.data.length ? list.data[index] : null,
-                  index < list.data.length - 1 ? list.data[index + 1] : null,
+                  index < list.data!.length ? list.data![index] : null,
+                  index < list.data!.length - 1 ? list.data![index + 1] : null,
                 );
               }
 
@@ -63,7 +63,7 @@ class InfiniteListView<T extends Model, Q extends Query>
                     ? 1
                     : 0),
             itemBuilder: (context, index) {
-              if (list.data == null || index >= list.data.length) {
+              if (list.data == null || index >= list.data!.length) {
                 if (list.state == InfiniteListState.error) {
                   return _buildError(context, list.error);
                 } else {
@@ -79,10 +79,10 @@ class InfiniteListView<T extends Model, Q extends Query>
                     reverse ? VerticalDirection.up : VerticalDirection.down,
                 children: <Widget>[
                   if (index == 0 && separatorBuilder != null)
-                    separatorBuilder(context, null, list.data[index]),
-                  itemBuilder(context, list.data[index], list.query, index),
-                  if (index == list.data.length - 1 && separatorBuilder != null)
-                    separatorBuilder(context, list.data[index], null),
+                    separatorBuilder!(context, null, list.data![index]),
+                  itemBuilder(context, list.data![index], list.query, index),
+                  if (index == list.data!.length - 1 && separatorBuilder != null)
+                    separatorBuilder!(context, list.data![index], null),
                 ],
               );
             },
@@ -94,8 +94,8 @@ class InfiniteListView<T extends Model, Q extends Query>
     if (emptyStateBuilder != null) {
       return SingleChildScrollView(
         child: Padding(
-          padding: padding,
-          child: emptyStateBuilder(context, query),
+          padding: padding ?? EdgeInsets.zero,
+          child: emptyStateBuilder!(context, query),
         ),
       );
     }

@@ -9,7 +9,11 @@ abstract class FirebaseDAO<M extends Model> implements DAO<M> {
   FromJson<M> fromJson;
   ToJson<M> toJson;
 
-  FirebaseDAO({this.collectionName, this.fromJson, this.toJson});
+  FirebaseDAO({
+    required this.collectionName,
+    required this.fromJson,
+    required this.toJson,
+  });
 
   firestore.CollectionReference get _collection =>
       firestore.FirebaseFirestore.instance.collection(collectionName);
@@ -39,21 +43,25 @@ abstract class FirebaseDAO<M extends Model> implements DAO<M> {
   }
 
   @override
-  Future<M> get(String id) async {
+  Future<M?> get(String id) async {
     firestore.DocumentSnapshot doc = await _collection.doc(id).get();
 
-    return fromJson(doc.id, doc.data());
+    if (doc.exists) {
+      return fromJson(doc.id, doc.data() as dynamic);
+    }
+
+    return null;
   }
 
-  Stream<M> live(String id) {
+  Stream<M?> live(String id) {
     return _collection.doc(id).snapshots(includeMetadataChanges: true).map(
-          (snap) => snap.exists ? fromJson(snap.id, snap.data()) : null,
+          (snap) => snap.exists ? fromJson(snap.id, snap.data() as dynamic) : null,
         );
   }
 
   Future<List<M>> list() async {
     firestore.QuerySnapshot query = await _collection.get();
 
-    return query.docs.map((doc) => fromJson(doc.id, doc.data())).toList();
+    return query.docs.map((doc) => fromJson(doc.id, doc.data() as dynamic)).toList();
   }
 }

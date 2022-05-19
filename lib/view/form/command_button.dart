@@ -1,15 +1,15 @@
 part of main_class.view;
 
-typedef LodingWrapper = Future<T> Function<T>(Future<T> future);
+typedef LodingWrapper = Future<T?> Function<T>(Future<T?> future);
 typedef CommandCallback = Function(LodingWrapper loading);
 
 class CommandButton extends StatefulWidget {
-  final Widget child;
-  final CommandCallback onPressed;
-  final EdgeInsets padding;
-  final ShapeBorder shape;
-  final Color fillColor;
-  final double elevation;
+  final Widget? child;
+  final CommandCallback? onPressed;
+  final EdgeInsets? padding;
+  final ShapeBorder? shape;
+  final Color? fillColor;
+  final double? elevation;
 
   CommandButton({
     this.child,
@@ -33,11 +33,11 @@ class _CommandButtonState extends State<CommandButton> {
 
     return RawMaterialButton(
       constraints: BoxConstraints(
-        minWidth: buttonTheme?.minWidth ?? 54,
+        minWidth: buttonTheme.minWidth ?? 54,
       ),
-      padding: widget.padding ?? buttonTheme?.padding,
-      shape: widget.shape ?? buttonTheme?.shape,
-      fillColor: (widget.fillColor ?? buttonTheme?.colorScheme?.primary)
+      padding: widget.padding ?? buttonTheme.padding,
+      shape: widget.shape ?? buttonTheme.shape,
+      fillColor: (widget.fillColor ?? buttonTheme.colorScheme!.primary)
           .withOpacity(_loading || widget.onPressed == null ? .45 : 1),
       elevation: widget.elevation ?? 2,
       child: _buildChild(),
@@ -50,15 +50,15 @@ class _CommandButtonState extends State<CommandButton> {
 
     return AnimatedCrossFade(
       firstChild: DefaultTextStyle(
-        style: (theme?.textTheme?.button ?? TextStyle()).copyWith(
-          color: theme?.textTheme?.button?.color ?? Colors.black,
-          fontSize: theme?.textTheme?.button?.fontSize ?? 14,
+        style: (theme.textTheme.button ?? TextStyle()).copyWith(
+          color: theme.textTheme.button?.color ?? Colors.black,
+          fontSize: theme.textTheme.button?.fontSize ?? 14,
         ),
-        child: widget.child,
+        child: widget.child ?? Container(),
       ),
       secondChild: _buildLoader(
-        color: theme?.textTheme?.button?.color ?? Colors.black,
-        fontSize: theme?.textTheme?.button?.fontSize ?? 14,
+        color: theme.textTheme.button?.color ?? Colors.black,
+        fontSize: theme.textTheme.button?.fontSize ?? 14,
       ),
       crossFadeState:
           _loading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
@@ -66,7 +66,7 @@ class _CommandButtonState extends State<CommandButton> {
     );
   }
 
-  Widget _buildLoader({Color color, double fontSize}) {
+  Widget _buildLoader({required Color color, required double fontSize}) {
     return Padding(
       padding: const EdgeInsets.all(1),
       child: SizedBox(
@@ -81,10 +81,10 @@ class _CommandButtonState extends State<CommandButton> {
   }
 
   _act() {
-    widget.onPressed(_interceptor);
+    widget.onPressed!(_interceptor);
   }
 
-  Future<T> _interceptor<T>(Future<T> future) async {
+  Future<T?> _interceptor<T>(Future<T?> future) async {
     try {
       FocusScope.of(context).requestFocus(FocusNode());
 
@@ -99,7 +99,10 @@ class _CommandButtonState extends State<CommandButton> {
     } on AbortException catch (ex) {
       // Ignorado
     } catch (ex, stack) {
-      print("[MAIN CLASS] ERRO NÃO TRATADO: " + ex.toString() + "\n" + stack.toString());
+      print("[MAIN CLASS] ERRO NÃO TRATADO: " +
+          ex.toString() +
+          "\n" +
+          stack.toString());
       rethrow;
     } finally {
       setState(() {

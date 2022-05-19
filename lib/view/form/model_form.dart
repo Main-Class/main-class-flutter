@@ -2,12 +2,12 @@ part of main_class.view;
 
 class ModelForm<M extends Model> extends PlainForm<M, M> {
   ModelForm({
-    ModelFormBloc<M> bloc,
-    M initialModel,
+    required ModelFormBloc<M> bloc,
+    required M initialModel,
     String buttonText = "Salvar",
-    SubmitCallback<M> onSubmit,
-    PlainFormBuilder<M> formBuilder,
-    ErrorCallback onSubmitError,
+    SubmitCallback<M>? onSubmit,
+    required PlainFormBuilder<M> formBuilder,
+    ErrorCallback? onSubmitError,
   }) : super(
           bloc: bloc,
           initialModel: initialModel,

@@ -6,7 +6,11 @@ abstract class FirebaseQueryDAO<M extends Model, Q extends Query>
   final bool group;
   final FromJson<M> fromJson;
 
-  FirebaseQueryDAO({this.collectionName, this.group = false, this.fromJson});
+  FirebaseQueryDAO({
+    required this.collectionName,
+    this.group = false,
+    required this.fromJson,
+  });
 
   firestore.Query get _collection => group
       ? firestore.FirebaseFirestore.instance.collectionGroup(collectionName)
@@ -24,7 +28,7 @@ abstract class FirebaseQueryDAO<M extends Model, Q extends Query>
         await whereQuery.limit(query.limit ?? 10).get();
 
     return Page(
-      result: snapshot.docs.map((doc) => fromJson(doc.id, doc.data())).toList(),
+      result: snapshot.docs.map((doc) => fromJson(doc.id, doc.data() as dynamic)).toList(),
       nextPageRef: snapshot.docs.length == (query.limit ?? 10)
           ? snapshot.docs.last
           : null,

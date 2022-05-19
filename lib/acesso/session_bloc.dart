@@ -1,21 +1,18 @@
 part of main_class.acesso;
 
 class SessionBloc implements Bloc {
-  BehaviorSubject<UsuarioLogado> _usuario;
+  late BehaviorSubject<UsuarioLogado?> _usuario;
 
-  Stream<UsuarioLogado> get usuario => _usuario.stream;
+  Stream<UsuarioLogado?> get usuario => _usuario.stream;
 
-  UsuarioLogado get currentUsuario => _usuario.value;
-
-  StreamSubscription<UsuarioLogado> _usuarioSubscription;
+  UsuarioLogado? get currentUsuario => _usuario.valueOrNull;
 
   AcessoHandler acessoHandler;
 
-  SessionBloc({this.acessoHandler});
+  SessionBloc({required this.acessoHandler});
 
   @override
   void dispose() {
-    _usuarioSubscription?.cancel();
     _usuario.close();
     acessoHandler.dispose();
   }
@@ -33,7 +30,7 @@ class SessionBloc implements Bloc {
     return usuario;
   }
 
-  _add(UsuarioLogado usuario) async {
+  _add(UsuarioLogado? usuario) async {
     _usuario.add(usuario);
   }
 

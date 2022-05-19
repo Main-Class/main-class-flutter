@@ -8,9 +8,9 @@ typedef FormBuilder<I, O> = Widget Function(BuildContext context, I model,
 
 class ManualForm<I, O> extends StatelessWidget {
   const ManualForm({
-    @required this.bloc,
-    @required this.initialModel,
-    @required this.formBuilder,
+    required this.bloc,
+    required this.initialModel,
+    required this.formBuilder,
   })  : assert(formBuilder != null),
         assert(initialModel != null),
         assert(bloc != null);
@@ -33,9 +33,9 @@ class ManualForm<I, O> extends StatelessWidget {
 
 class _InnerManualForm<I, O, B extends FormBloc<I, O>> extends StatefulWidget {
   const _InnerManualForm({
-    @required this.initialModel,
+    required this.initialModel,
     this.disableSubmitOnInvalid = false,
-    @required this.formBuilder,
+    required this.formBuilder,
   })  : assert(formBuilder != null),
         assert(initialModel != null),
         assert(disableSubmitOnInvalid != null);
@@ -56,12 +56,12 @@ class _InnerManualFormState<I, O, B extends FormBloc<I, O>>
   void initState() {
     super.initState();
 
-    BlocProvider.of<B>(context).set(widget.initialModel);
+    BlocProvider.of<B>(context)!.set(widget.initialModel);
   }
 
   @override
   Widget build(BuildContext context) {
-    B bloc = BlocProvider.of<B>(context);
+    B bloc = BlocProvider.of<B>(context)!;
 
     return Form(
       key: _form,
@@ -71,8 +71,8 @@ class _InnerManualFormState<I, O, B extends FormBloc<I, O>>
         builder: (context, snapshot) {
           return widget.formBuilder(
             context,
-            snapshot.data,
-            _setModel(bloc, snapshot.data),
+            snapshot.data!,
+            _setModel(bloc, snapshot.data!),
             () async => await _submit(bloc),
             (input) async => await _reset(bloc, input),
           );
@@ -82,8 +82,8 @@ class _InnerManualFormState<I, O, B extends FormBloc<I, O>>
   }
 
   Future<O> _submit(B bloc) async {
-    if (_form.currentState.validate()) {
-      _form.currentState.save();
+    if (_form.currentState!.validate()) {
+      _form.currentState!.save();
 
       return await bloc.submit();
     }
@@ -92,7 +92,7 @@ class _InnerManualFormState<I, O, B extends FormBloc<I, O>>
   }
 
   Future<void> _reset(B bloc, I input) async {
-    _form.currentState.reset();
+    _form.currentState!.reset();
     bloc.set(input);
   }
 

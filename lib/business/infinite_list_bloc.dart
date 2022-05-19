@@ -8,17 +8,17 @@ enum InfiniteListState {
 }
 
 class SnapshotInfiniteList<M extends Model, Q extends Query> {
-  final List<M> data;
+  final List<M>? data;
   final InfiniteListState state;
   final Q query;
   final dynamic error;
   final dynamic nextPageRef;
-  final int total;
+  final int? total;
 
   const SnapshotInfiniteList({
     this.data,
-    this.state,
-    this.query,
+    required this.state,
+    required this.query,
     this.error,
     this.nextPageRef,
     this.total,
@@ -27,13 +27,13 @@ class SnapshotInfiniteList<M extends Model, Q extends Query> {
   bool get hasNext => nextPageRef != null;
 
   SnapshotInfiniteList<M, Q> copyWith({
-    List<M> data,
-    InfiniteListState state,
-    Q query,
+    List<M>? data,
+    InfiniteListState? state,
+    Q? query,
     dynamic error,
     dynamic nextPageRef,
     bool forceNextPageRef = false,
-    int total,
+    int? total,
   }) {
     return new SnapshotInfiniteList<M, Q>(
       data: data ?? this.data,
@@ -50,7 +50,7 @@ class SnapshotInfiniteList<M extends Model, Q extends Query> {
 
 abstract class InfiniteListBloc<M extends Model, Q extends Query>
     implements Bloc {
-  BehaviorSubject<SnapshotInfiniteList<M, Q>> items;
+  late BehaviorSubject<SnapshotInfiniteList<M, Q>> items;
 
   final QueryDAO<M, Q> queryDAO;
 
@@ -61,10 +61,9 @@ abstract class InfiniteListBloc<M extends Model, Q extends Query>
   Stream<SnapshotInfiniteList<M, Q>> get listStream => items.stream;
 
   InfiniteListBloc({
-    this.queryDAO,
-    this.rootQuery,
-  })  : assert(queryDAO != null),
-        assert(rootQuery != null);
+    required this.queryDAO,
+    required this.rootQuery,
+  });
 
   Future<Page<M>> doQuery(Q query) async {
     return await queryDAO.query(query);
@@ -86,7 +85,7 @@ abstract class InfiniteListBloc<M extends Model, Q extends Query>
           forceNextPageRef: true,
           query: query,
           data: [
-            ...items.value.data,
+            ...(items.value.data ?? []),
             ...page.result,
           ],
           total: page.total,
@@ -105,7 +104,7 @@ abstract class InfiniteListBloc<M extends Model, Q extends Query>
   }
 
   Future<Page<M>> nextPage() {
-    Q q = items.value.query.copyWith();
+    Q q = items.value.query.copyWith() as Q;
     q.pageRef = items.value.nextPageRef;
     return query(q);
   }

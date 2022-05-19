@@ -7,10 +7,10 @@ class ApiQueryDAO<M extends Model, Q extends Query> implements QueryDAO<M, Q> {
   final JsonDecoder<M> modelDecoder;
 
   ApiQueryDAO({
-    this.client,
-    this.basePath,
-    this.modelDecoder,
-    this.queryEncoder,
+    required this.client,
+    required this.basePath,
+    required this.modelDecoder,
+    required this.queryEncoder,
   });
 
   @override

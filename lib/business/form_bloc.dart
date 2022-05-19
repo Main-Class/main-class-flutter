@@ -1,7 +1,7 @@
 part of main_class.business;
 
 abstract class FormBloc<I, O> implements Bloc {
-  BehaviorSubject<I> _model;
+  late BehaviorSubject<I> _model;
 
   I get model => _model.value;
 

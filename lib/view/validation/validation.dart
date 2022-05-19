@@ -1,7 +1,7 @@
 part of main_class.view;
 
 FormFieldValidator<T> validate<T>(List<FormFieldValidator<T>> validators) {
-  return (T valor) {
+  return (T? valor) {
     for (FormFieldValidator<T> val in validators) {
       var msg = val(valor);
       if (msg != null) {
@@ -14,7 +14,7 @@ FormFieldValidator<T> validate<T>(List<FormFieldValidator<T>> validators) {
 }
 
 FormFieldValidator<String> notEmpty() {
-  return (String valor) {
+  return (String? valor) {
     if (valor == null || valor.isEmpty) {
       return "Campo obrigatório.";
     }
@@ -24,7 +24,7 @@ FormFieldValidator<String> notEmpty() {
 }
 
 FormFieldValidator<T> notNull<T>() {
-  return (T valor) {
+  return (T? valor) {
     if (valor == null) {
       return "Campo obrigatório.";
     }
@@ -34,8 +34,10 @@ FormFieldValidator<T> notNull<T>() {
 }
 
 FormFieldValidator<String> email() {
-  return (String valor) {
-    if (valor != null && valor.isNotEmpty && !RegExp("^.+@.+\$").hasMatch(valor)) {
+  return (String? valor) {
+    if (valor != null &&
+        valor.isNotEmpty &&
+        !RegExp("^.+@.+\$").hasMatch(valor)) {
       return "E-mail inválido.";
     }
 
@@ -43,10 +45,9 @@ FormFieldValidator<String> email() {
   };
 }
 
-FormFieldValidator<String> length({int max, int min}) {
-  return (String valor) {
+FormFieldValidator<String> length({int? max, int? min}) {
+  return (String? valor) {
     if (valor != null && valor.isNotEmpty) {
-
       if (min != null && min > valor.length) {
         return "Deve possuir no mínimo $min caracteres.";
       }
@@ -54,7 +55,6 @@ FormFieldValidator<String> length({int max, int min}) {
       if (max != null && max < valor.length) {
         return "Deve possuir no máximo $max caracteres.";
       }
-
     }
 
     return null;

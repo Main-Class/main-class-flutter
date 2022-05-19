@@ -5,5 +5,5 @@ abstract class DAO<M extends Model> {
 
   Future<void> delete(String id);
 
-  Future<M> get(String id);
+  Future<M?> get(String id);
 }

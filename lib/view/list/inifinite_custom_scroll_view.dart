@@ -4,17 +4,17 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
     extends StatelessWidget {
   final InfiniteListBloc<M, Q> bloc;
   final ItemBuilder<M, Q> itemBuilder;
-  final int placeholderCount;
-  final EdgeInsetsGeometry padding;
+  final int? placeholderCount;
+  final EdgeInsetsGeometry? padding;
   final List<Widget> preSlivers;
   final List<Widget> posSlivers;
-  final SeparatorBuilder<M> separatorBuilder;
-  final EmptyStateBuilder<Q> emptyStateBuilder;
+  final SeparatorBuilder<M>? separatorBuilder;
+  final EmptyStateBuilder<Q>? emptyStateBuilder;
 
   const InfiniteCustomScrollView({
-    Key key,
-    @required this.bloc,
-    @required this.itemBuilder,
+    Key? key,
+    required this.bloc,
+    required this.itemBuilder,
     this.preSlivers = const [],
     this.posSlivers = const [],
     this.placeholderCount,
@@ -36,7 +36,7 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
         stream: bloc.listStream,
         initialData: bloc.list,
         builder: (context, snapshot) {
-          SnapshotInfiniteList<M, Q> list = snapshot.data;
+          SnapshotInfiniteList<M, Q> list = snapshot.data!;
 
           if ((list.data?.isEmpty ?? true) &&
               list.nextPageRef == null &&
@@ -59,7 +59,7 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
                 new SliverList(
                   delegate: SliverChildBuilderDelegate(
                     (context, index) {
-                      if (list.data == null || index >= list.data.length) {
+                      if (list.data == null || index >= list.data!.length) {
                         if (list.state == InfiniteListState.error) {
                           return _buildError(context, list.error);
                         } else {
@@ -75,12 +75,12 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
                       return Column(
                         children: <Widget>[
                           if (index == 0 && separatorBuilder != null)
-                            separatorBuilder(context, null, list.data[index]),
+                            separatorBuilder!(context, null, list.data![index]),
                           itemBuilder(
-                              context, list.data[index], list.query, index),
-                          if (index == list.data.length - 1 &&
+                              context, list.data![index], list.query, index),
+                          if (index == list.data!.length - 1 &&
                               separatorBuilder != null)
-                            separatorBuilder(context, list.data[index], null),
+                            separatorBuilder!(context, list.data![index], null),
                         ],
                       );
                     },
@@ -102,7 +102,7 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
       return Container(
         padding: padding,
         width: double.infinity,
-        child: emptyStateBuilder(context, query),
+        child: emptyStateBuilder!(context, query),
       );
     }
 
@@ -166,17 +166,17 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
     if (placeholderCount != null) {
       List<Widget> ws = [];
 
-      for (int i = 0; i < placeholderCount; i++) {
+      for (int i = 0; i < placeholderCount!; i++) {
         if (separatorBuilder != null && i > 0) {
-          ws.add(separatorBuilder(context, null, null));
+          ws.add(separatorBuilder!(context, null, null));
         }
 
         ws.add(itemBuilder(context, null, list.query, i));
       }
 
       return Shimmer.fromColors(
-        baseColor: Colors.grey[300],
-        highlightColor: Colors.grey[100],
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
         child: Column(
           children: ws,
         ),

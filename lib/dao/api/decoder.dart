@@ -12,10 +12,10 @@ PageDecoder<M> pageDecoder<M extends Model>(JsonDecoder<M> modelDecoder) {
       nextPageRef: (json['hasProxima'] ?? false)
           ? int.parse(json['paginaAtual'].toString()) + 1
           : null,
-      result: (json['itens'] as List)
+      result: (json['itens'] as List?)
               ?.map((e) => e as Map<String, dynamic>)
-              ?.map(modelDecoder)
-              ?.toList() ??
+              .map(modelDecoder)
+              .toList() ??
           [],
       total: int.parse(json['totalItens'].toString()),
     );

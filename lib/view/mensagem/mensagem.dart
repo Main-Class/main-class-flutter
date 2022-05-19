@@ -3,8 +3,10 @@ part of main_class.view;
 enum TipoMensagem { success, error, warning }
 
 class Mensagem extends Flushbar {
-  Mensagem({String mensagem, TipoMensagem tipo})
-      : super(
+  Mensagem({
+    required String mensagem,
+    TipoMensagem tipo = TipoMensagem.success,
+  }) : super(
           backgroundColor: _color(tipo),
           flushbarPosition: FlushbarPosition.TOP,
           flushbarStyle: FlushbarStyle.GROUNDED,
@@ -48,11 +50,11 @@ class Mensagem extends Flushbar {
 
   static Color _color(TipoMensagem tipo) {
     if (tipo == TipoMensagem.error) {
-      return Colors.red[900];
+      return Colors.red[900]!;
     } else if (tipo == TipoMensagem.warning) {
-      return Colors.yellow[900];
+      return Colors.yellow[900]!;
     } else {
-      return Colors.green[900];
+      return Colors.green[900]!;
     }
   }
 
