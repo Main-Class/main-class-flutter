@@ -20,7 +20,7 @@ class SessionBloc implements Bloc {
   Future<UsuarioLogado> login(
     String username,
     String password,
-    Map<String, dynamic> extras,
+    [Map<String, dynamic>? extras]
   ) async {
     UsuarioLogado usuario =
         await acessoHandler.login(username, password, extras);

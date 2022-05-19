@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/acesso/session_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/acesso/session_bloc.dart" afterDir="false" />
@@ -41,6 +40,7 @@
       <change beforePath="$PROJECT_DIR$/lib/view/list/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/list/types.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/mensagem/mensagem.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/mensagem/mensagem.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/splash/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/splash/splash.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/validation/validation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/validation/validation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -115,7 +115,7 @@
       <workItem from="1610397393275" duration="1937000" />
       <workItem from="1642172122910" duration="1117000" />
       <workItem from="1647620031221" duration="298000" />
-      <workItem from="1652922891467" duration="1817000" />
+      <workItem from="1652922891467" duration="1921000" />
     </task>
     <servers />
   </component>
