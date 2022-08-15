@@ -48,7 +48,7 @@ class _CommandButtonState extends State<CommandButton> {
         fontSize: theme.textTheme.button?.fontSize ?? 14,
       ),
       crossFadeState:
-          _loading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      _loading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
       duration: const Duration(milliseconds: 300),
     );
   }
@@ -72,6 +72,7 @@ class _CommandButtonState extends State<CommandButton> {
   }
 
   Future<T?> _interceptor<T>(Future<T?> future) async {
+    ScaffoldMessengerState scaffoldMessenger = ScaffoldMessenger.of(context)
     try {
       FocusScope.of(context).requestFocus(FocusNode());
 
@@ -81,7 +82,7 @@ class _CommandButtonState extends State<CommandButton> {
 
       return await future;
     } on BusinessException catch (ex) {
-      Mensagem.error(ex.message).show(context);
+      scaffoldMessenger.showSnackBar(Mensagem.error(ex.message));
       rethrow;
     } on AbortException catch (ex) {
       // Ignorado

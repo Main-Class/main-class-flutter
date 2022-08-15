@@ -38,8 +38,6 @@ P
 N
 lib/view/form/manual_form.dart,3/6/36538c1a492bda7232d5884dda13994f090fb34f
 M
-lib/view/form/plain_form.dart,4/d/4d183945710d502e7171d6369f377ce699cb675b
-M
 lib/view/form/model_form.dart,0/9/0940808e2bda2185a6678119981553c8a2c2e341
 H
 lib/view/list/types.dart,0/1/013e84c2e49b535b91c7bf86a5888a68fb341ca1
@@ -51,3 +49,11 @@ K
 lib/view/splash/splash.dart,2/7/27724b5f849d90a207fde84534d510928a14cd5f
 S
 #lib/view/validation/validation.dart,b/8/b81fecfffd83c5123395cfcd3a41415afb49019f
+L
+lib/acesso/session_bloc.dart,3/5/35043952478ed95457f79aabf7a0ea102c0dbebb
+N
+lib/acesso/acesso_handler.dart,1/0/1028f69af905e33a2b93b29303665f9a43e1df7f
+O
+lib/view/mensagem/mensagem.dart,0/2/02097d7a40d61c128eabfb18792e55c4db15fdcc
+C
+lib/view/index.dart,6/0/603bd4854639a417c10ae6c3b7884a631476bba6

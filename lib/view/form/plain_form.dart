@@ -72,13 +72,7 @@ class PlainForm<I, O> extends ManualForm<I, O> {
       width: double.infinity,
       height: 48,
       child: CommandButton(
-        child: Text(
-          buttonText,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-          ),
-        ),
+        child: Text(buttonText),
         onPressed: (loading) async {
           try {
             await loading(_submit());
