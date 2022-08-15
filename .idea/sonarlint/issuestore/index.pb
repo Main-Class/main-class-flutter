@@ -53,7 +53,5 @@ L
 lib/acesso/session_bloc.dart,3/5/35043952478ed95457f79aabf7a0ea102c0dbebb
 N
 lib/acesso/acesso_handler.dart,1/0/1028f69af905e33a2b93b29303665f9a43e1df7f
-O
-lib/view/mensagem/mensagem.dart,0/2/02097d7a40d61c128eabfb18792e55c4db15fdcc
 C
 lib/view/index.dart,6/0/603bd4854639a417c10ae6c3b7884a631476bba6
