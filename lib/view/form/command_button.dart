@@ -72,7 +72,7 @@ class _CommandButtonState extends State<CommandButton> {
   }
 
   Future<T?> _interceptor<T>(Future<T?> future) async {
-    ScaffoldMessengerState scaffoldMessenger = ScaffoldMessenger.of(context)
+    ScaffoldMessengerState scaffoldMessenger = ScaffoldMessenger.of(context);
     try {
       FocusScope.of(context).requestFocus(FocusNode());
 

@@ -64,7 +64,7 @@ class ApiClient {
     try {
       Response resp = await dio.post(
         "$basePath$path",
-        data: body != null && toJson != null ? toJson!(body) : body,
+        data: body != null && toJson != null ? toJson(body) : body,
         queryParameters: queryParams ?? {},
         options: Options(
           headers: headers ?? {},
