@@ -65,10 +65,6 @@ abstract class InfiniteListBloc<M extends Model, Q extends Query>
     required this.rootQuery,
   });
 
-  Future<Page<M>> doQuery(Q query) async {
-    return await queryDAO.query(query);
-  }
-
   Future<Page<M>> query(Q query, {bool reset = false}) async {
     items.add(items.value.copyWith(
       data: reset ? [] : null,
@@ -76,7 +72,7 @@ abstract class InfiniteListBloc<M extends Model, Q extends Query>
     ));
 
     try {
-      Page<M> page = await doQuery(query);
+      Page<M> page = await queryDAO.query(query);
 
       items.add(
         items.value.copyWith(

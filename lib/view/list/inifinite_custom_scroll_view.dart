@@ -80,7 +80,8 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
                               context, list.data![index], list.query, index),
                           if (index == list.data!.length - 1 &&
                               separatorBuilder != null)
-                            separatorBuilder!(context, list.data![index], null),
+                            if (index == list.data!.length - 1 && separatorBuilder != null)
+                              separatorBuilder!(context, list.data![index], null),
                         ],
                       );
                     },

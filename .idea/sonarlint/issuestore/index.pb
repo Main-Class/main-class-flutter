@@ -7,8 +7,6 @@ N
 lib/acesso/usuario_logado.dart,f/b/fb838747b610b2c987fc11af08216eeadd34e233
 D
 lib/model/query.dart,7/6/76ce373f5393d244a54ae1ba67cc87703785eaac
-T
-$lib/business/infinite_list_bloc.dart,d/9/d9f0d5710ebd6413d816526b2942bf4a57c1d598
 N
 lib/dao/api/api_query_dao.dart,a/1/a1ccc1995aed88aaf22c3891845defe726822b20
 H
@@ -39,10 +37,6 @@ M
 lib/view/form/model_form.dart,0/9/0940808e2bda2185a6678119981553c8a2c2e341
 H
 lib/view/list/types.dart,0/1/013e84c2e49b535b91c7bf86a5888a68fb341ca1
-_
-/lib/view/list/inifinite_custom_scroll_view.dart,e/8/e8bf72996651defe5c319b031d1c685715023259
-V
-&lib/view/list/inifinite_list_view.dart,2/4/240ede0ac03ec6468427efbdc797ebc8871dce68
 K
 lib/view/splash/splash.dart,2/7/27724b5f849d90a207fde84534d510928a14cd5f
 S
@@ -53,3 +47,7 @@ N
 lib/acesso/acesso_handler.dart,1/0/1028f69af905e33a2b93b29303665f9a43e1df7f
 C
 lib/view/index.dart,6/0/603bd4854639a417c10ae6c3b7884a631476bba6
+M
+lib/view/form/plain_form.dart,4/d/4d183945710d502e7171d6369f377ce699cb675b
+O
+lib/view/mensagem/mensagem.dart,0/2/02097d7a40d61c128eabfb18792e55c4db15fdcc
