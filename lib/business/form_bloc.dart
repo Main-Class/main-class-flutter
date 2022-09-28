@@ -1,9 +1,9 @@
 part of main_class.business;
 
 abstract class FormBloc<I, O> implements Bloc {
-  late BehaviorSubject<I> _model;
+  late ReplaySubject<I> _model;
 
-  I get model => _model.value;
+  I? get model => _model.values.isEmpty ? null : _model.values.first;
 
   Stream<I> get stream => _model.stream;
 
@@ -15,7 +15,7 @@ abstract class FormBloc<I, O> implements Bloc {
 
   @override
   Future<void> init() async {
-    _model = new BehaviorSubject();
+    _model = new ReplaySubject(maxSize: 1);
   }
 
   @override

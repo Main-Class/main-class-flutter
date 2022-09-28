@@ -1,8 +1,6 @@
 
 F
 main_class_flutter.iml,6/3/63b4058a6c6669805bc22d0ebd1fb14f4c54085e
-<
-pubspec.lock,c/1/c1c78778a0cef1e5344166792d1d823fdcb8b109
 D
 lib/model/query.dart,7/6/76ce373f5393d244a54ae1ba67cc87703785eaac
 N
@@ -19,8 +17,6 @@ R
 -lib/dao/firebase/firebase_live_query_dao.dart,8/a/8acb1aca6671c30ce7a68f42907d0f8bb7a4e919
 X
 (lib/dao/firebase/firebase_query_dao.dart,c/e/cea95061468788a1c21d0c31aabdd25888632669
-K
-lib/business/form_bloc.dart,8/f/8f2ea894ec96b0b31235d60ec4ccb19ee086b26d
 C
 lib/model/page.dart,9/4/943a1d191c7d704b798f5e6007a326249e4109c4
 H
@@ -37,8 +33,6 @@ N
 lib/acesso/usuario_logado.dart,f/b/fb838747b610b2c987fc11af08216eeadd34e233
 T
 $lib/business/infinite_list_bloc.dart,d/9/d9f0d5710ebd6413d816526b2942bf4a57c1d598
-Q
-!lib/business/model_form_bloc.dart,5/0/50e1a653b9401beb8e699547da498bb437249625
 Q
 !lib/model/business_exception.dart,9/7/97713b04666359361c8cbba80c5f752cbd0556f9
 D

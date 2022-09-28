@@ -17,6 +17,6 @@ class ModelFormBloc<M extends Model> extends FormBloc<M, M> {
 
   @override
   Future<M> submit() async {
-    return await dao.save(model);
+    return await dao.save(model!);
   }
 }
