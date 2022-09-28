@@ -28,6 +28,7 @@ part 'list/inifinite_list_view.dart';
 part 'list/types.dart';
 
 part 'mensagem/mensagem.dart';
+part 'mensagem/mensagem_config.dart';
 
 part 'splash/splash.dart';
 

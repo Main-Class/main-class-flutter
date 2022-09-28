@@ -10,6 +10,9 @@ class InfiniteListView<T extends Model, Q extends Query>
     this.reverse = false,
     this.separatorBuilder,
     this.emptyStateBuilder,
+    this.emptyStateMessage,
+    this.defaultErrorMessage,
+    this.tryAgainText,
   })  : assert(bloc != null),
         assert(scrollDirection != null),
         assert(itemBuilder != null);
@@ -21,6 +24,9 @@ class InfiniteListView<T extends Model, Q extends Query>
   final EdgeInsetsGeometry? padding;
   final SeparatorBuilder<T>? separatorBuilder;
   final EmptyStateBuilder<Q>? emptyStateBuilder;
+  final String? emptyStateMessage;
+  final String? defaultErrorMessage;
+  final String? tryAgainText;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +87,8 @@ class InfiniteListView<T extends Model, Q extends Query>
                   if (index == 0 && separatorBuilder != null)
                     separatorBuilder!(context, null, list.data![index]),
                   itemBuilder(context, list.data![index], list.query, index),
-                  if (index == list.data!.length - 1 && separatorBuilder != null)
+                  if (index == list.data!.length - 1 &&
+                      separatorBuilder != null)
                     separatorBuilder!(context, list.data![index], null),
                 ],
               );
@@ -104,7 +111,7 @@ class InfiniteListView<T extends Model, Q extends Query>
       padding: EdgeInsets.all(50),
       width: double.infinity,
       child: Text(
-        "Nenhum registro encontrado.",
+        emptyStateMessage ?? "Nenhum registro encontrado.",
         style: TextStyle(color: Colors.black54),
         textAlign: TextAlign.center,
       ),
@@ -129,7 +136,8 @@ class InfiniteListView<T extends Model, Q extends Query>
           DefaultTextStyle(
             child: Text(error is BusinessException
                 ? error.message
-                : "Oooops! Ocorreu um erro na consulta!."),
+                : (defaultErrorMessage ??
+                    "Oooops! Ocorreu um erro na consulta!.")),
             style: TextStyle(color: Colors.black54),
             textAlign: TextAlign.center,
           ),
@@ -146,7 +154,7 @@ class InfiniteListView<T extends Model, Q extends Query>
               ),
             ),
             onPressed: bloc.refresh,
-            child: const Text("Tentar Novamente"),
+            child: Text(tryAgainText ?? "Tentar Novamente"),
           )
         ],
       ),

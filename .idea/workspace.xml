@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a160ee6b-a2d0-405d-97b3-da06a0a87a9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/list/inifinite_custom_scroll_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/list/inifinite_custom_scroll_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,15 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pubspec.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/tools/flutter/bin/cache/pkg/sky_engine/lib/async/timer.dart" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/lib/business/infinite_list_bloc.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/view/list/inifinite_custom_scroll_view.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/view/list/inifinite_list_view.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/view/form/command_button.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/dao/api/api_client.dart" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,7 +93,7 @@
       <workItem from="1652924937340" duration="4953000" />
       <workItem from="1660572304991" duration="1493000" />
       <workItem from="1660855832562" duration="887000" />
-      <workItem from="1660870480993" duration="859000" />
+      <workItem from="1660870480993" duration="2027000" />
     </task>
     <servers />
   </component>

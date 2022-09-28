@@ -10,6 +10,9 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
   final List<Widget> posSlivers;
   final SeparatorBuilder<M>? separatorBuilder;
   final EmptyStateBuilder<Q>? emptyStateBuilder;
+  final String? emptyStateMessage;
+  final String? defaultErrorMessage;
+  final String? tryAgainText;
 
   const InfiniteCustomScrollView({
     Key? key,
@@ -21,6 +24,9 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
     this.padding,
     this.separatorBuilder,
     this.emptyStateBuilder,
+    this.emptyStateMessage,
+    this.defaultErrorMessage,
+    this.tryAgainText,
   }) : super(key: key);
 
   @override
@@ -114,7 +120,7 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
       padding: EdgeInsets.all(50),
       width: double.infinity,
       child: Text(
-        "Nenhum registro encontrado.",
+        emptyStateMessage ?? "Nenhum registro encontrado.",
         style: TextStyle(color: Colors.black54),
         textAlign: TextAlign.center,
       ),
@@ -139,7 +145,8 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
           DefaultTextStyle(
             child: Text(error is BusinessException
                 ? error.message
-                : "Oooops! Ocorreu um erro na consulta!."),
+                : (defaultErrorMessage ??
+                    "Oooops! Ocorreu um erro na consulta!.")),
             style: TextStyle(color: Colors.black54),
             textAlign: TextAlign.center,
           ),
@@ -156,8 +163,8 @@ class InfiniteCustomScrollView<M extends Model, Q extends Query>
               ),
             ),
             onPressed: bloc.refresh,
-            child: const Text(
-              "Tentar Novamente",
+            child: Text(
+              tryAgainText ?? "Tentar Novamente",
               style: TextStyle(color: Colors.black54),
             ),
           )

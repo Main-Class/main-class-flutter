@@ -12,13 +12,13 @@ class BlocProvider<T extends Bloc> extends StatefulWidget {
         assert(child != null),
         super(key: key);
 
-  static T? of<T extends Bloc>(BuildContext context) {
+  static T of<T extends Bloc>(BuildContext context) {
     assert(context != null);
 
-    BlocProviderState<T>? state =
-        context.findAncestorStateOfType<BlocProviderState<T>>();
+    BlocProviderState<T> state =
+        context.findAncestorStateOfType<BlocProviderState<T>>()!;
 
-    return state?.bloc;
+    return state.bloc;
   }
 
   @override

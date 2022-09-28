@@ -3,8 +3,6 @@ F
 main_class_flutter.iml,6/3/63b4058a6c6669805bc22d0ebd1fb14f4c54085e
 <
 pubspec.lock,c/1/c1c78778a0cef1e5344166792d1d823fdcb8b109
-N
-lib/acesso/usuario_logado.dart,f/b/fb838747b610b2c987fc11af08216eeadd34e233
 D
 lib/model/query.dart,7/6/76ce373f5393d244a54ae1ba67cc87703785eaac
 N
@@ -23,31 +21,7 @@ X
 (lib/dao/firebase/firebase_query_dao.dart,c/e/cea95061468788a1c21d0c31aabdd25888632669
 K
 lib/business/form_bloc.dart,8/f/8f2ea894ec96b0b31235d60ec4ccb19ee086b26d
-Q
-!lib/business/model_form_bloc.dart,5/0/50e1a653b9401beb8e699547da498bb437249625
-D
-lib/model/model.dart,7/d/7d5b9a9fdb31e9be43f938a2437c9c0938125164
 C
 lib/model/page.dart,9/4/943a1d191c7d704b798f5e6007a326249e4109c4
-P
- lib/view/bloc/bloc_provider.dart,d/0/d0bb609e0dafb1df28373aaddd92729721d991dd
-N
-lib/view/form/manual_form.dart,3/6/36538c1a492bda7232d5884dda13994f090fb34f
-M
-lib/view/form/model_form.dart,0/9/0940808e2bda2185a6678119981553c8a2c2e341
 H
 lib/view/list/types.dart,0/1/013e84c2e49b535b91c7bf86a5888a68fb341ca1
-K
-lib/view/splash/splash.dart,2/7/27724b5f849d90a207fde84534d510928a14cd5f
-S
-#lib/view/validation/validation.dart,b/8/b81fecfffd83c5123395cfcd3a41415afb49019f
-L
-lib/acesso/session_bloc.dart,3/5/35043952478ed95457f79aabf7a0ea102c0dbebb
-N
-lib/acesso/acesso_handler.dart,1/0/1028f69af905e33a2b93b29303665f9a43e1df7f
-C
-lib/view/index.dart,6/0/603bd4854639a417c10ae6c3b7884a631476bba6
-M
-lib/view/form/plain_form.dart,4/d/4d183945710d502e7171d6369f377ce699cb675b
-O
-lib/view/mensagem/mensagem.dart,0/2/02097d7a40d61c128eabfb18792e55c4db15fdcc

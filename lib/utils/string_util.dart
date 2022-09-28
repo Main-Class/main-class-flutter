@@ -48,6 +48,22 @@ extension StringExtension on String {
     return formatado;
   }
 
+  /// Use # para representar placeholder de números
+  String getFormated(String format) {
+    String formatado = "";
+    String cc = this.unformated;
+
+    for (int i = 0; i < format.length && i < cc.length; i++) {
+      if (format[i] == '#') {
+        formatado += cc[i];
+      } else {
+        formatado += format[i];
+      }
+    }
+
+    return formatado;
+  }
+
   String get formatedAsCEP {
     String formatado = "";
     String cepUnformatted = unformated;

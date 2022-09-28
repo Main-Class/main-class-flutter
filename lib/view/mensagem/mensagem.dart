@@ -12,8 +12,13 @@ class Mensagem extends SnackBar {
           content: Row(
             children: <Widget>[
               Expanded(
-                child: Text(
-                  mensagem,
+                child: DefaultTextStyle(
+                  child: Builder(
+                    builder: (context) {
+                      TextBuilder textBuilder = MensagemTextBuilder.of(context);
+                      return textBuilder(context, mensagem);
+                    },
+                  ),
                   style: TextStyle(
                     color: Colors.white,
                   ),

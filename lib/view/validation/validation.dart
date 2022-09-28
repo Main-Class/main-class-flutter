@@ -13,47 +13,48 @@ FormFieldValidator<T> validate<T>(List<FormFieldValidator<T>> validators) {
   };
 }
 
-FormFieldValidator<String> notEmpty() {
+FormFieldValidator<String> notEmpty({String? mensagem}) {
   return (String? valor) {
     if (valor == null || valor.isEmpty) {
-      return "Campo obrigatório.";
+      return mensagem ?? "Campo obrigatório.";
     }
 
     return null;
   };
 }
 
-FormFieldValidator<T> notNull<T>() {
+FormFieldValidator<T> notNull<T>({String? mensagem}) {
   return (T? valor) {
     if (valor == null) {
-      return "Campo obrigatório.";
+      return mensagem ?? "Campo obrigatório.";
     }
 
     return null;
   };
 }
 
-FormFieldValidator<String> email() {
+FormFieldValidator<String> email({String? mensagem}) {
   return (String? valor) {
     if (valor != null &&
         valor.isNotEmpty &&
         !RegExp("^.+@.+\$").hasMatch(valor)) {
-      return "E-mail inválido.";
+      return mensagem ?? "E-mail inválido.";
     }
 
     return null;
   };
 }
 
-FormFieldValidator<String> length({int? max, int? min}) {
+FormFieldValidator<String> length(
+    {int? max, int? min, String? mensagemMax, String? mensagemMin}) {
   return (String? valor) {
     if (valor != null && valor.isNotEmpty) {
       if (min != null && min > valor.length) {
-        return "Deve possuir no mínimo $min caracteres.";
+        return mensagemMin ?? "Deve possuir no mínimo $min caracteres.";
       }
 
       if (max != null && max < valor.length) {
-        return "Deve possuir no máximo $max caracteres.";
+        return mensagemMax ?? "Deve possuir no máximo $max caracteres.";
       }
     }
 
