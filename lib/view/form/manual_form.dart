@@ -56,12 +56,12 @@ class _InnerManualFormState<I, O, B extends FormBloc<I, O>>
   void initState() {
     super.initState();
 
-    BlocProvider.of<B>(context)!.set(widget.initialModel);
+    BlocProvider.of<B>(context).set(widget.initialModel);
   }
 
   @override
   Widget build(BuildContext context) {
-    B bloc = BlocProvider.of<B>(context)!;
+    B bloc = BlocProvider.of<B>(context);
 
     return Form(
       key: _form,
