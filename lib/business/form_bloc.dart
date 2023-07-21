@@ -3,7 +3,9 @@ part of main_class.business;
 abstract class FormBloc<I, O> implements Bloc {
   late ReplaySubject<I> _model;
 
-  I? get model => _model.values.isEmpty ? null : _model.values.first;
+  I get model => _model.values.first;
+
+  I? get modelOrNull => _model.values.isEmpty ? null : _model.values.first;
 
   Stream<I> get stream => _model.stream;
 
