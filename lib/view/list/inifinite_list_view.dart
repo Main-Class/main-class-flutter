@@ -11,6 +11,7 @@ class InfiniteListView<T extends Model, Q extends Query>
     this.separatorBuilder,
     this.emptyStateBuilder,
     this.emptyStateMessage,
+    this.loadingStateBuilder,
     this.defaultErrorMessage,
     this.tryAgainText,
   })  : assert(bloc != null),
@@ -24,6 +25,7 @@ class InfiniteListView<T extends Model, Q extends Query>
   final EdgeInsetsGeometry? padding;
   final SeparatorBuilder<T>? separatorBuilder;
   final EmptyStateBuilder<Q>? emptyStateBuilder;
+  final LoadingStateBuilder<Q>? loadingStateBuilder;
   final String? emptyStateMessage;
   final String? defaultErrorMessage;
   final String? tryAgainText;
@@ -77,7 +79,7 @@ class InfiniteListView<T extends Model, Q extends Query>
                     bloc.nextPage();
                   }
 
-                  return _buildLoading(context);
+                  return _buildLoading(context, list.query);
                 }
               }
               return Column(
@@ -161,7 +163,11 @@ class InfiniteListView<T extends Model, Q extends Query>
     );
   }
 
-  Widget _buildLoading(BuildContext context) {
+  Widget _buildLoading(BuildContext context, Q query) {
+    if (loadingStateBuilder != null) {
+      return loadingStateBuilder!(context, query);
+    }
+
     return Container(
       padding: const EdgeInsets.all(20),
       alignment: Alignment.center,

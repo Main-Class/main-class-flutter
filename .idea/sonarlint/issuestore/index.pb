@@ -17,8 +17,6 @@ X
 (lib/dao/firebase/firebase_query_dao.dart,c/e/cea95061468788a1c21d0c31aabdd25888632669
 C
 lib/model/page.dart,9/4/943a1d191c7d704b798f5e6007a326249e4109c4
-H
-lib/view/list/types.dart,0/1/013e84c2e49b535b91c7bf86a5888a68fb341ca1
 K
 lib/dao/api/api_client.dart,c/2/c2a99017d54ead131e2a4983450242d707076353
 T
@@ -45,8 +43,6 @@ Q
 !lib/view/form/command_button.dart,2/e/2e9124b5f4bf699dfb0c30add34a3fa74a6b37a8
 _
 /lib/view/list/inifinite_custom_scroll_view.dart,e/8/e8bf72996651defe5c319b031d1c685715023259
-V
-&lib/view/list/inifinite_list_view.dart,2/4/240ede0ac03ec6468427efbdc797ebc8871dce68
 S
 #lib/view/validation/validation.dart,b/8/b81fecfffd83c5123395cfcd3a41415afb49019f
 P
