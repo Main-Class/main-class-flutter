@@ -1,8 +1,6 @@
 
 F
 main_class_flutter.iml,6/3/63b4058a6c6669805bc22d0ebd1fb14f4c54085e
-D
-lib/model/query.dart,7/6/76ce373f5393d244a54ae1ba67cc87703785eaac
 N
 lib/dao/api/api_query_dao.dart,a/1/a1ccc1995aed88aaf22c3891845defe726822b20
 H

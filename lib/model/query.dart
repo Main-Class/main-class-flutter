@@ -6,5 +6,5 @@ abstract class Query {
 
   Query({this.limit, this.pageRef});
 
-  Query copyWith({dynamic pageRef, int limit});
+  Query copyWith({dynamic pageRef, int? limit});
 }
