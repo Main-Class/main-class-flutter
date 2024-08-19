@@ -23,8 +23,6 @@ class _CommandButtonState extends State<CommandButton> {
 
   @override
   Widget build(BuildContext context) {
-    ButtonThemeData buttonTheme = ButtonTheme.of(context);
-
     return ElevatedButton(
       style: widget.style,
       child: _buildChild(),
@@ -37,15 +35,15 @@ class _CommandButtonState extends State<CommandButton> {
 
     return AnimatedCrossFade(
       firstChild: DefaultTextStyle(
-        style: (theme.textTheme.button ?? TextStyle()).copyWith(
-          color: theme.textTheme.button?.color ?? Colors.black,
-          fontSize: theme.textTheme.button?.fontSize ?? 14,
+        style: (theme.textTheme.labelLarge ?? TextStyle()).copyWith(
+          color: theme.textTheme.labelLarge?.color ?? Colors.black,
+          fontSize: theme.textTheme.labelLarge?.fontSize ?? 14,
         ),
         child: widget.child ?? Container(),
       ),
       secondChild: _buildLoader(
-        color: theme.textTheme.button?.color ?? Colors.black,
-        fontSize: theme.textTheme.button?.fontSize ?? 14,
+        color: theme.textTheme.labelLarge?.color ?? Colors.black,
+        fontSize: theme.textTheme.labelLarge?.fontSize ?? 14,
       ),
       crossFadeState:
       _loading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
