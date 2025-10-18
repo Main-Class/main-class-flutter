@@ -1,5 +1,6 @@
 part of main_class.model;
 
+
 abstract class Model<T> {
   T? id;
 

@@ -1,5 +1,6 @@
 part of main_class.model;
 
+
 class Page<M extends Model> {
   final List<M> result;
   final dynamic nextPageRef;

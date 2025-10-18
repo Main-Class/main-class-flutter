@@ -3,11 +3,11 @@ part of main_class.acesso;
 typedef AlteradorUsuario = Function(UsuarioLogado usuario);
 
 class SessionBloc implements Bloc {
-  late BehaviorSubject<UsuarioLogado?> _usuario;
+  late ReplaySubject<UsuarioLogado?> _usuario;
 
   Stream<UsuarioLogado?> get usuario => _usuario.stream;
 
-  UsuarioLogado? get currentUsuario => _usuario.valueOrNull;
+  UsuarioLogado? get currentUsuario => _usuario.values.firstOrNull;
 
   AcessoHandler acessoHandler;
 
@@ -19,10 +19,16 @@ class SessionBloc implements Bloc {
     acessoHandler.dispose();
   }
 
-  Future<UsuarioLogado> login(String username, String password,
-      [Map<String, dynamic>? extras]) async {
-    UsuarioLogado usuario =
-        await acessoHandler.login(username, password, extras);
+  Future<UsuarioLogado> login(
+    String username,
+    String password, [
+    Map<String, dynamic>? extras,
+  ]) async {
+    UsuarioLogado usuario = await acessoHandler.login(
+      username,
+      password,
+      extras,
+    );
 
     _add(usuario);
 
@@ -48,7 +54,7 @@ class SessionBloc implements Bloc {
 
   @override
   Future<void> init() async {
-    _usuario = new BehaviorSubject();
+    _usuario = new ReplaySubject(maxSize: 1);
     await acessoHandler.init();
     await _add(await acessoHandler.getUsuarioLogado());
   }

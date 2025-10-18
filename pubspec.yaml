@@ -1,10 +1,10 @@
 name: main_class_flutter
-description: A Flutter lib with infrastructre components
-version: 3.1.7
+description: A Flutter lib with infrastructre widgets and classes
+version: 4.0.0
 homepage: https://mainclass.com.br
 
 environment:
-  sdk: ">=2.16.2 <3.0.0"
+  sdk: ^3.7.0
 
 dependencies:
   flutter:
@@ -14,6 +14,7 @@ dependencies:
   dio:
   shimmer:
   intl:
+  provider:
 
 dev_dependencies:
   flutter_test:
